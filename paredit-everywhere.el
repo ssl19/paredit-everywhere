@@ -39,15 +39,17 @@
 
 (defvar paredit-everywhere-mode-map
   (let ((m (make-sparse-keymap)))
+    (define-key m (kbd "C-(") 'paredit-backward-slurp-sexp)
     (define-key m (kbd "C-)") 'paredit-forward-slurp-sexp)
     (define-key m (kbd "C-}") 'paredit-forward-barf-sexp)
+    (define-key m (kbd "C-{") 'paredit-backward-barf-sexp)
     (define-key m (kbd "M-(") 'paredit-wrap-round)
     (define-key m (kbd "M-)") 'paredit-close-round-and-newline)
     (define-key m (kbd "M-]") 'paredit-close-square-and-newline)
     (define-key m (kbd "M-\"") 'paredit-meta-doublequote)
     (define-key m (kbd "M-S") 'paredit-split-sexp)
     (define-key m (kbd "M-J") 'paredit-join-sexps)
-    (define-key m (kbd "M-s") 'paredit-splice-sexp)
+    (define-key m (kbd "M-D") 'paredit-splice-sexp)
     (define-key m (kbd "M-r") 'paredit-raise-sexp)
     (define-key m (kbd "M-DEL") 'paredit-backward-kill-word)
     (define-key m (kbd "M-d") 'paredit-forward-kill-word)
