@@ -29,6 +29,9 @@
 ;; This library, then, provides a minor mode which enables a subset
 ;; of the `paredit' library's editing commands in non-lisp buffers.
 
+;; History:
+;; 2022-02-05 Samuel Lee
+;; Modify some default key-bindings for my personal purpose.
 ;; Usage:
 ;;
 ;; (add-hook 'prog-mode-hook 'paredit-everywhere-mode)
